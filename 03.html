@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: MAIOR DE DOIS NÚMEROS
+    Construa um algoritmo que leia dois números inteiros. Verifique qual dos dois números é maior e o escreva.
+    */
+
+    //ENTRADA
+    const numeroUm = Number(prompt("Informe o primeiro número:"));
+    const numeroDois = Number(prompt("Informe o segundo número:"));
+
+    //PROCESSAMENTO
+    let mensagemFinal = "";
+    (numeroUm > numeroDois) ? mensagemFinal = `O maior número é ${numeroUm}.` : mensagemFinal = `O maior número é ${numeroDois}.`;
+    
+    //SAÍDA
+    document.write(mensagemFinal);
+</script>
