@@ -13,8 +13,9 @@
     const precoProduto = Number(prompt("Informe o preço do produto:"));
 
     //PROCESSAMENTO
-
+    let mensagemFinal;
+    (precoProduto <= 280) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.2) + " reais." : (precoProduto <= 700) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.15) + " reais." : (precoProduto <= 1500) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.1) + " reais." : (precoProduto > 1500) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.05) + " reais." : mensagemFinal = "Dados Inválidos!";
     
     //SAÍDA
-
+    document.write(mensagemFinal);
 </script>
