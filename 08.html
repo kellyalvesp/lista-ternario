@@ -8,13 +8,16 @@
     */
 
     //ENTRADA
-    const preco = Number(prompt("Informe o preço do litro do combustível:"));
+    const preco = Number(prompt("Informe o preço do litro do combustível:").replace(",", "."));
     const quantidade = Number(prompt("Informe a quantidade de litros utilizados para se deslocar para o trabalho diariamente:"));
-    const precoTransporte = Number(prompt("Informe o preço do transporte público:"));
+    const precoTransporte = Number(prompt("Informe o preço do transporte público:").replace(",", "."));
 
     //PROCESSAMENTO
-
+    let mensagemFinal;
+    let automovel = (preco * quantidade) * 2;
+    let transportePub = precoTransporte * 2;
+    (automovel < transportePub) ? mensagemFinal = `O meio de transporte mais barato é o automóvel. <br> Custo: R$${automovel.toFixed(2).replace(".", ",")}.` : (automovel > transportePub) ? mensagemFinal = `O meio de transporte mais barato é o transporte público. <br> Custo: R$${transportePub.toFixed(2).replace(".", ",")}.` : mensagemFinal = "Dados Inválidos!";
     
     //SAÍDA
-    
+    document.write(mensagemFinal);
 </script>
