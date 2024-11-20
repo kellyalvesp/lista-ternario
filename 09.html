@@ -11,13 +11,15 @@
 
     //ENTRADA
     const horas = Number(prompt(`Informe a quantidade de horas trabalhadas semanalmente:`));
-    const valorHora = Number(prompt(`Informe quanto você recebe por hora trabalhada:`));
+    const valorHora = Number(prompt(`Informe quanto você recebe por hora trabalhada:`).replace(",", "."));
 
     //PROCESSAMENTO
     let salario = valorHora * horas;
     let mensagemFinal;
-    (horas <= 60) ? mensagemFinal = "Haverá adicional de 20%. <br> Salário Final: R$ " + (salario * 1.20) + ". <br> Preço de cada hora trabalhada: " + (valorHora) + "." : (horas > 60) ? mensagemFinal = "Haverá adicional de 30%. <br> Salário Final: R$ " + (salario * 1.30) + ". <br> Preço de cada hora trabalhada: " + (valorHora) + "." : mensagemFinal = "Não haverá adicional.";
-    
+    (horas <= 60) ? mensagemFinal = "Haverá adicional de 20%. <br> Salário Final: R$ " + (salario + (salario * 0.20)).toFixed(2).replace(".", ",") + ". <br> Preço de cada hora trabalhada: " + (valorHora) + "." : (horas > 60) ? mensagemFinal = "Haverá adicional de 30%. <br> Salário Final: R$ " + (salario + (salario * 1.30)).toFixed(2).replace(".", ",") + ". <br> Preço de cada hora trabalhada: " + (valorHora) + "." : mensagemFinal = "Não haverá adicional.";
+
     //SAÍDA
     document.write(mensagemFinal);
+
+    // ok.
 </script>

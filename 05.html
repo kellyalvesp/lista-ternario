@@ -10,12 +10,14 @@
     */
 
     //ENTRADA
-    const precoProduto = Number(prompt("Informe o preço do produto:"));
+    const precoProduto = Number(prompt("Informe o preço do produto:").replace(",", "."));
 
     //PROCESSAMENTO
     let mensagemFinal;
-    (precoProduto <= 280) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.2) + " reais." : (precoProduto <= 700) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.15) + " reais." : (precoProduto <= 1500) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.1) + " reais." : (precoProduto > 1500) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.05) + " reais." : mensagemFinal = "Dados Inválidos!";
+    (precoProduto <= 280) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.2).toFixed(2).replace(".", ",") + " reais." : (precoProduto <= 700) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.15).toFixed(2).replace(".", ",") + " reais." : (precoProduto <= 1500) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.1).toFixed(2).replace(".", ",") + " reais." : (precoProduto > 1500) ? mensagemFinal = "O aumento é de R$" + (precoProduto * 0.05).toFixed(2).replace(".", ",") + " reais." : mensagemFinal = "Dados Inválidos!";
     
     //SAÍDA
     document.write(mensagemFinal);
+
+    // ok.
 </script>
